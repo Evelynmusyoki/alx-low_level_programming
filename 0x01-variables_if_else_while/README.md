@@ -1,1 +1,1 @@
-print no
+print 6 nos
