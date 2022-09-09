@@ -1,1 +1,1 @@
-alphabet 3
+print no
