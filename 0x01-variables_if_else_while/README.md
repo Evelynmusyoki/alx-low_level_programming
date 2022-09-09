@@ -1,1 +1,1 @@
-100 print
+print 101
