@@ -1,45 +1,44 @@
 #include <stdio.h>
 
 /**
- *  * main - Entry point
+ *  * main - prints possiblecombinations of two two-digit numbers
  *   *
- *    * Return: Always 0 (Succes)
-*/
-
+ *    * Return: 0
+ *     */
 int main(void)
 {
-int tho;
-int hun;
-int ten;
-int bas;
+		int i, j, k, m;
 
-for ( tho = 0 ; tho < 10 ; tho++)
-{	
-
-for (hun = 0 ; hun <= 10 ; hun++)
-{
-
-for (ten = 0 ; ten < 10 ; ten++)
-{
-for ( bas = 0 ; bas < 10 ; bas++)
-{
-putchar('0' + tho);
-putchar('0' + hun);
-putchar(32);
-putchar('0' + ten);
-putchar('0' + bas);
-if (!(tho == 9 && hun == 8))
-{
-putchar(',');
-putchar(32);
-}
-bas++;
-}
-}
-}
-}
-putchar('\n');
-return (0);
-}
-
-
+			i = 48;
+				while (i < 58)
+						{
+									j = 48;
+											while (j < 58)
+														{
+																		m = j + 1;
+																					k = i;
+																								while (k < 58)
+																												{
+																																	while (m < 58)
+																																						{
+																																												putchar(i);
+																																																	putchar(j);
+																																																						putchar(32);
+																																																											putchar(k);
+																																																																putchar(m);
+																																																																					if (i < 57 || j < 56 || k < 57 || m < 57)
+																																																																											{
+																																																																																		putchar(44);
+																																																																																								putchar(32);
+																																																																																													}
+																																																																										m++;
+																																																																														}
+																																					m = 48;
+																																									k++;
+																																												}
+																											j++;
+																													}
+													i++;
+														}
+					putchar(10);
+						return (0);
