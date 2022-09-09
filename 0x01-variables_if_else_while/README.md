@@ -1,1 +1,1 @@
-print 6 nos
+task 7
