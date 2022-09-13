@@ -1,1 +1,1 @@
-put char
+alphabet
