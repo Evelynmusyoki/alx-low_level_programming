@@ -1,40 +1,43 @@
 #include "main.h"
 /**
- *  * print_times_table - Prints the times table of the input, starting with zero
- *   * @n: The value of the times table to be printed.
- *    * Return: returns nothing
-*/
-void print_times_table(int n)
+ *  * main - prints possiblecombinations of two two-digit numbers
+ *   *
+ *    * Return: 0
+ *     */
+int main(void)
 {
-int digit, mult, result;
-if (n <= 15 && n >= 0)
+int i, j, k, m;
+i = 48;
+while (i < 58)
 {
-for (digit = 0; digit <= n; digit++)
+j = 48;
+while (j < 58)
 {
-_putchar('0');
-for (mult = 1; mult <= n; mult++)
+m = j + 1;
+k = i;
+while (k < 58)
 {
-_putchar(',');
-_putchar(' ');
-result = digit * mult;
-if (result <= 99)
-_putchar(' ');
-if (result <= 9)
-_putchar(' ');
-if (result >= 100)
+while (m < 58)
 {
-_putchar((result / 100) + '0');
-_putchar((result / 10) % 10 + '0');
-}
-else if (result <= 99 && result >= 10)
+putchar(i);
+putchar(j);
+putchar(32);
+putchar(k);
+putchar(m);
+if (i < 57 || j < 56 || k < 57 || m < 57)
 {
-_putchar((result / 10) + '0');
+putchar(44);
+putchar(32);
 }
-_putchar((result % 10) + '0');
+m++;
 }
-_putchar('\n');
+m = 48;
+k++;
 }
+j++;
 }
+i++;
 }
-
-
+putchar(10);
+return (0);
+}
