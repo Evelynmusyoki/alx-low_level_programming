@@ -1,43 +1,48 @@
 #include "main.h"
 /**
- *  * main - prints possiblecombinations of two two-digit numbers
- *   *
- *    * Return: 0
- *     */
-int main(void)
+ *  * print_times_table - prints the n times table, starting with 0
+ *   * @n: number of the times table
+ *    */
+void print_times_table(int n)
 {
-int i, j, k, m;
-i = 48;
-while (i < 58)
+int i, j, k;
+if (n >= 0 && n <= 15)
 {
-j = 48;
-while (j < 58)
+for (i = 0; i <= n; i++)
 {
-m = j + 1;
-k = i;
-while (k < 58)
+for (j = 0; j <= n; j++)
 {
-while (m < 58)
+k = j * i;
+if (j == 0)
 {
-putchar(i);
-putchar(j);
-putchar(32);
-putchar(k);
-putchar(m);
-if (i < 57 || j < 56 || k < 57 || m < 57)
-{
-putchar(44);
-putchar(32);
+_putchar(k + '0');
 }
-m++;
+else if (k < 10 && j != 0)
+{
+_putchar(',');
+_putchar(' ');
+_putchar(' ');
+_putchar(' ');
+_putchar(k + '0');
 }
-m = 48;
-k++;
+else if (k >= 10 && k < 100)
+{
+_putchar(',');
+_putchar(' ');
+_putchar(' ');
+_putchar((k / 10) + '0');
+_putchar((k % 10) + '0');
 }
-j++;
+else if (k >= 100)
+{
+_putchar(',');
+_putchar(' ');
+_putchar((k / 100) + '0');
+_putchar(((k / 10) % 10) + '0');
+_putchar((k % 10) + '0');
 }
-i++;
 }
-putchar(10);
-return (0);
+_putchar('\n');
+}
+}
 }
