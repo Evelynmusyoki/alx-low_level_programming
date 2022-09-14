@@ -8,7 +8,7 @@
 int _islower(int c)
 {
 int result;
-if (c is lowercase)
+if ('c is lowercase')
 result =1;
 else
 result =0;
