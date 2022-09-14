@@ -4,9 +4,12 @@ void print_alphabet(void);
 int main(void)
 {
 char ch;
+ch ='a';
+while (ch<='z')
 {
-for (ch='a';ch<='z';ch++;)
+_putchar (ch)
+ch++;
 }
-putchar("ch%s"\n,ch);
+_putchar('\n')
 return 0;
 }
