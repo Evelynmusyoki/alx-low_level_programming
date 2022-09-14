@@ -1,1 +1,1 @@
-100 t.t
+natural
