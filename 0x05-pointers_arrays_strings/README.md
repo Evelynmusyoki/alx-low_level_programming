@@ -1,1 +1,1 @@
-puts c
+print ev
