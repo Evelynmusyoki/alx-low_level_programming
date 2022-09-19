@@ -1,1 +1,1 @@
-print ev
+rev string
