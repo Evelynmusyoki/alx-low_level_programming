@@ -1,1 +1,1 @@
-rev string
+6-puts2.c
