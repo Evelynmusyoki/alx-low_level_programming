@@ -1,1 +1,1 @@
-print array
+9-strcpy.c
